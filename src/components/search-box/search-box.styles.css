@@ -1,0 +1,17 @@
+.search-box {
+	text-align: center;
+	padding: 50px;
+}
+
+.search-box > h1 {
+	font-size: 60px;
+}
+
+.search-box > input {
+	height: 48px;
+	width: 100%;
+	max-width: 400px;
+	border-radius: 8px;
+	padding: 12px 20px;
+	margin-top: 12px;
+}

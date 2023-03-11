@@ -1,0 +1,11 @@
+.cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 30px;
+	margin-top: 30px;
+}
+
+.cards > h1 {
+	grid-column: span 3;
+	text-align: center;
+}
