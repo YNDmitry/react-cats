@@ -5,7 +5,14 @@
 	margin-top: 30px;
 }
 
-.cards > h1 {
-	grid-column: span 3;
-	text-align: center;
+@media screen and (max-width: 769px) {
+	.cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.cards {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
