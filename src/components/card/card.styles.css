@@ -12,3 +12,9 @@
 	margin-bottom: 10px;
 	margin-top: 5px;
 }
+
+@media screen and (max-width: 769px) {
+	.cards__card {
+		padding: 30px 15px;
+	}
+}

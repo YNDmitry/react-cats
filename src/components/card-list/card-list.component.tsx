@@ -1,31 +1,18 @@
-import { Component } from 'react'
-import './card-list.styles.css'
+import React from 'react'
 import Card from '../card/card.component'
+import { iUsersListObject } from './card-list.interface'
+import './card-list.styles.css'
 
-interface iUsersListObject {
-	id: number
-	name: string
-	username: string
-	phone: string
-	email: string
-}
-
-class CardList extends Component<{ users: Array<iUsersListObject> }> {
-	render() {
-		const { users } = this.props
-
-		return (
-			<div className='cards'>
-				{users.length > 0 ? (
-					users.map((el) => {
-						return <Card user={el} key={el.id} />
-					})
-				) : (
-					<h1>Cats not found :(</h1>
-				)}
-			</div>
-		)
-	}
+const CardList: React.FC<iUsersListObject> = ({ users }) => {
+	return users.length > 0 ? (
+		<div className='cards'>
+			{users.map((el) => {
+				return <Card user={el} key={el.id} />
+			})}
+		</div>
+	) : (
+		<h1 className='text-center'>Cats not found...</h1>
+	)
 }
 
 export default CardList
